@@ -88,7 +88,6 @@ copyBtn.addEventListener("click", function(e){
 })
 async function copyToClipboard(inputElement) {
   // Copy the text inside the input element
-  console.log(inputElement.value)
   try {
       await navigator.clipboard.writeText(inputElement.value);
       modal.classList.add("modalActive")
