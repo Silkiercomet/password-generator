@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg" href="./images/icon-copy.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="range-input.css" />
+    <title>password generator</title>
+  </head>
+  <body>
+
+    <main>
+      <header>
+        <h1>Password Generator</h1>
+        <div class="result">
+          <input type="text" disabled value="JTNG0%9" id="generatePassword">
+          <img src="images/icon-copy.svg" alt="copy password" id="clipboard">
+        </div>
+      </header>
+
+      <form id="form">
+        <label for="passwordlength"
+          >Character Length <span id="length">9</span></label
+        >
+        <input
+          class="styled-slider slider-progress"
+          type="range"
+          name="length"
+          id="passwordlength"
+          value="10"
+          min="5"
+          max="20"
+          step="1"
+        />
+        <fieldset>
+          <legend class="sr-only">Inclusion options</legend>
+          <ul>
+            <li>
+              <input type="checkbox" checked name="options" id="uppercase" class="optionCheck"/><label for="uppercase"><div><img src="images/icon-check.svg" alt="check symbol" /></div> <strong>Include Uppercase Letters</strong></label
+              >
+            </li>
+            <li>
+              <input type="checkbox" name="options" id="lowercase" class="optionCheck"/><label for="lowercase"><div><img src="images/icon-check.svg" alt="check symbol" /></div> <strong>Include Lowercase Letters</strong></label
+              >
+            </li>
+            <li>
+              <input type="checkbox" name="options" id="numbers" class="optionCheck"/><label for="numbers"><div><img src="images/icon-check.svg" alt="check symbol" /></div> <strong>Include Numbers</strong></label
+              >
+            </li>
+            <li>
+              <input type="checkbox" name="options" id="symbols" class="optionCheck"/><label for="symbols"><div><img src="images/icon-check.svg" alt="check symbol" /></div> <strong>Include Symbols</strong></label
+              >
+            </li>
+          </ul>
+
+        </fieldset>
+        <div class="safety">
+          <span>Strength</span>
+          <ul>
+            <li id="resultScore">Weak</li>
+            <li class="passwordStrength yellow"></li>
+            <li class="passwordStrength"></li>
+            <li class="passwordStrength"></li>
+            <li class="passwordStrength"></li>
+          </ul>
+        </div>
+        <button type="submit">Generate <i><img src="images/icon-arrow-right.svg" alt="Generate password"></i></button>
+      </form>
+    </main>
+    <div class="modal">
+      <p>copied to clipboard!</p>
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="counter.js"></script>
+  </body>
+</html>
