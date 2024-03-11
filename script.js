@@ -74,6 +74,7 @@ const checkPassword = (password) => {
     }else{
       bar.classList.remove("yellow")
     }
+    scoreDisplayedText.textContent = scoreText[score]
   })
 }
 
